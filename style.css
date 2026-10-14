@@ -1,0 +1,150 @@
+:root {
+    --bg-dark: #0f172a;
+    --card-bg: #1e293b;
+    --accent: #38bdf8;
+    --text-main: #f8fafc;
+    --text-muted: #94a3b8;
+}
+
+body {
+    background-color: var(--bg-dark);
+    color: var(--text-main);
+    font-family: 'Segoe UI', system-ui, sans-serif;
+    margin: 0;
+    padding: 20px;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+header h1 { color: var(--accent); margin-bottom: 5px; }
+header p { color: var(--text-muted); margin-top: 0; }
+
+.tabs {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 30px;
+    flex-wrap: wrap;
+}
+
+.tab-btn {
+    background: var(--card-bg);
+    border: 1px solid #334155;
+    color: var(--text-main);
+    padding: 10px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.tab-btn:hover, .tab-btn.active {
+    background: var(--accent);
+    color: var(--bg-dark);
+    font-weight: bold;
+}
+
+.animation-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.card {
+    background: var(--card-bg);
+    border-radius: 12px;
+    overflow: hidden;
+    cursor: pointer;
+    border: 1px solid #334155;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(56, 189, 248, 0.2);
+}
+
+.preview-area {
+    background: #020617;
+    height: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.demo-box {
+    width: 50px;
+    height: 50px;
+    background: var(--accent);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--bg-dark);
+    font-weight: bold;
+}
+
+.card-info {
+    padding: 15px;
+}
+
+.card-info h3 { margin: 0 0 5px 0; font-size: 1rem; }
+.card-info p { margin: 0; color: var(--text-muted); font-size: 0.8rem; }
+
+/* Modal */
+.modal {
+    display: none;
+    position: fixed;
+    top:0; left:0; width:100%; height:100%;
+    background: rgba(0,0,0,0.7);
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+}
+
+.modal-content {
+    background: var(--card-bg);
+    padding: 30px;
+    border-radius: 16px;
+    max-width: 600px;
+    width: 90%;
+    max-height: 85vh;
+    overflow-y: auto;
+    position: relative;
+}
+
+.close-btn {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    font-size: 1.8rem;
+    cursor: pointer;
+    color: var(--text-muted);
+}
+
+.close-btn:hover { color: #fff; }
+
+.code-box {
+    background: #020617;
+    padding: 15px;
+    border-radius: 8px;
+    margin-top: 15px;
+    position: relative;
+}
+
+pre { margin: 0; overflow-x: auto; color: #a7f3d0; font-family: monospace; }
+
+.copy-btn {
+    margin-top: 10px;
+    background: var(--accent);
+    border: none;
+    padding: 5px 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+}
+\n.anim-fade-1 { animation: anim-fade-1 2s infinite ease-in-out; }\n@keyframes anim-fade-1 { 0% { transform: scale(1); opacity: 0.7; } 50% { transform: scale(1.2) rotate(1.5deg); opacity: 1; } 100% { transform: scale(1); opacity: 0.7; } }\n\n.anim-slide-2 { animation: anim-slide-2 2s infinite ease-in-out; }\n@keyframes anim-slide-2 { 0% { transform: scale(1); opacity: 0.7; } 50% { transform: scale(1.2) rotate(3.0deg); opacity: 1; } 100% { transform: scale(1); opacity: 0.7; } }\n\n.anim-bounce-3 { animation: anim-bounce-3 2s infinite ease-in-out; }\n@keyframes anim-bounce-3 { 0% { transform: scale(1); opacity: 0.7; } 50% { transform: scale(1.2) rotate(4.5deg); opacity: 1; } 100% { transform: scale(1); opacity: 0.7; } }\n\n.anim-pulse-4 { animation: anim-pulse-4 2s infinite ease-in-out; }\n@keyframes anim-pulse-4 { 0% { transform: scale(1); opacity: 0.7; } 50% { transform: scale(1.2) rotate(6.0deg); opacity: 1; } 100% { transform: scale(1); opacity: 0.7; } }\n\n.anim-flip-5 { animation: anim-flip-5 2s infinite ease-in-out; }\n@keyframes anim-flip-5 { 0% { transform: scale(1); opacity: 0.7; } 50% { transform: scale(1.2) rotate(7.5deg); opacity: 1; } 100% { transform: scale(1); opacity: 0.7; } }\n\n.anim-rotate-6 { animation: anim-rotate-6 2s infinite ease-in-out; }\n@keyframes anim-rotate-6 { 0% { transform: scale(1); opacity: 0.7; } 50% { transform: scale(1.2) rotate(9.0deg); opacity: 1; } 100% { transform: scale(1); opacity: 0.7; } }\n\n.anim-shake-7 { animation: anim-shake-7 2s infinite ease-in-out; }\n@keyframes anim-shake-7 { 0% { transform: scale(1); opacity: 0.7; } 50% { transform: scale(1.2) rotate(10.5deg); opacity: 1; } 100% { transform: scale(1); opacity: 0.7; } }\n\n.anim-glitch-8 { animation: anim-glitch-8 2s infinite ease-in-out; }\n@keyframes anim-glitch-8 { 0% { transform: scale(1); opacity: 0.7; } 50% { transform: scale(1.2) rotate(12.0deg); opacity: 1; } 100% { transform: scale(1); opacity: 0.7; } }\n\n.anim-zoom-9 { animation: anim-zoom-9 2s infinite ease-in-out; }\n@keyframes anim-zoom-9 { 0% { transform: scale(1); opacity: 0.7; } 50% { transform: scale(1.2) rotate(13.5deg); opacity: 1; } 100% { transform: scale(1); opacity: 0.7; } }\n\n.anim-swing-10 { animation: anim-swing-10 2s infinite ease-in-out; }\n@keyframes anim-swing-10 { 0% { transform: scale(1); opacity: 0.7; } 50% { transform: scale(1.2) rotate(15.0deg); opacity: 1; } 100% { transform: scale(1); opacity: 0.7; } }\n\n.anim-fade-11 { animation: anim-fade-11 2s infinite ease-in-out; }\n@keyframes anim-fade-11 { 0% { transform: scale(1); opacity: 0.7; } 50% { transform: scale(1.2) rotate(16.5deg); opacity: 1; } 100% { transform: scale(1); opacity: 0.7; } }\n\n.anim-slide-12 { animation: anim-slide-12 2s infinite ease-in-out; }\n@keyframes anim-slide-12 { 0% { transform: scale(1); opacity: 0.7; } 50% { transform: scale(1.2) rotate(18.0deg); opacity: 1; } 100% { transform: scale(1); opacity: 0.7; } }\n\n.anim-bounce-13 { animation: anim-bounce-13 2s infinite ease-in-out; }\n@keyframes anim-bounce-13 { 0% { transform: scale(1); opacity: 0.7; } 50% { transform: scale(1.2) rotate(19.5deg); opacity: 1; } 100% { transform: scale(1); opacity: 0.7; } }\n\n.anim-pulse-14 { animation: anim-pulse-14 2s infinite ease-in-out; }\n@keyframes anim-pulse-14 { 0% { transform: scale(1); opacity: 0.7; } 50% { transform: scale(1.2) rotate(21.0deg); opacity: 1; } 100% { transform: scale(1); opacity: 0.7; } }\n\n.anim-flip-15 { animation: anim-flip-15 2s infinite ease-in-out; }\n@keyframes anim-flip-15 { 0% { transform: scale(1); opacity: 0.7; } 50% { transform: scale(1.2) rotate(22.5deg); opacity: 1; } 100% { transform: scale(1); opacity: 0.7; } }\n\n.anim-rotate-16 { animation: anim-rotate-16 2s infinite ease-in-out; }\n@keyframes anim-rotate-16 { 0% { transform: scale(1); opacity: 0.7; } 50% { transform: scale(1.2) rotate(24.0deg); opacity: 1; } 100% { transform: scale(1); opacity: 0.7; } }\n\n.anim-shake-17 { animation: anim-shake-17 2s infinite ease-in-out; }\n@keyframes anim-shake-17 { 0% { transform: scale(1); opacity: 0.7; } 50% { transform: scale(1.2) rotate(25.5deg); opacity: 1; } 100% { transform: scale(1); opacity: 0.7; } }\n\n.anim-glitch-18 { animation: anim-glitch-18 2s infinite ease-in-out; }\n@keyframes anim-glitch-18 { 0% { transform: scale(1); opacity: 0.7; } 50% { transform: scale(1.2) rotate(27.0deg); opacity: 1; } 100% { transform: scale(1); opacity: 0.7; } }\n\n.anim-zoom-19 { animation: anim-zoom-19 2s infinite ease-in-out; }\n@keyframes anim-zoom-19 { 0% { transform: scale(1); opacity: 0.7; } 50% { transform: scale(1.2) rotate(28.5deg); opacity: 1; } 100% { transform: scale(1); opacity: 0.7; } }\n\n.anim-swing-20 { animation: anim-swing-20 2s infinite ease-in-out; }\n@keyframes anim-swing-20 { 0% { transform: scale(1); opacity: 0.7; } 50% { transform: scale(1.2) rotate(30.0deg); opacity: 1; } 100% { transform: scale(1); opacity: 0.7; } }\n\n.anim-fade-21 { animation: anim-fade-21 2s infinite ease-in-out; }\n@keyframes anim-fade-21 { 0% { transform: scale(1); opacity: 0.7; } 50% { transform: scale(1.2) rotate(31.5deg); opacity: 1; } 100% { transform: scale(1); opacity: 0.7; } }\n\n.anim-slide-22 { animation: anim-slide-22 2s infinite ease-in-out; }\n@keyframes anim-slide-22 { 0% { transform: scale(1); opacity: 0.7; } 50% { transform: scale(1.2) rotate(33.0deg); opacity: 1; } 100% { transform: scale(1); opacity: 0.7; } }\n\n.anim-bounce-23 { animation: anim-bounce-23 2s infinite ease-in-out; }\n@keyframes anim-bounce-23 { 0% { transform: scale(1); opacity: 0.7; } 50% { transform: scale(1.2) rotate(34.5deg); opacity: 1; } 100% { transform: scale(1); opacity: 0.7; } }\n\n.anim-pulse-24 { animation: anim-pulse-24 2s infinite ease-in-out; }\n@keyframes anim-pulse-24 { 0% { transform: scale(1); opacity: 0.7; } 50% { transform: scale(1.2) rotate(36.0deg); opacity: 1; } 100% { transform: scale(1); opacity: 0.7; } }\n\n.anim-flip-25 { animation: anim-flip-25 2s infinite ease-in-out; }\n@keyframes anim-flip-25 { 0% { transform: scale(1); opacity: 0.7; } 50% { transform: scale(1.2) rotate(37.5deg); opacity: 1; } 100% { transform: scale(1); opacity: 0.7; } }\n\n.anim-rotate-26 { animation: anim-rotate-26 2s infinite ease-in-out; }\n@keyframes anim-rotate-26 { 0% { transform: scale(1); opacity: 0.7; } 50% { transform: scale(1.2) rotate(39.0deg); opacity: 1; } 100% { transform: scale(1); opacity: 0.7; } }\n\n.anim-shake-27 { animation: anim-shake-27 2s infinite ease-in-out; }\n@keyframes anim-shake-27 { 0% { transform: scale(1); opacity: 0.7; } 50% { transform: scale(1.2) rotate(40.5deg); opacity: 1; } 100% { transform: scale(1); opacity: 0.7; } }\n\n.anim-glitch-28 { animation: anim-glitch-28 2s infinite ease-in-out; }\n@keyframes anim-glitch-28 { 0% { transform: scale(1); opacity: 0.7; } 50% { transform: scale(1.2) rotate(42.0deg); opacity: 1; } 100% { transform: scale(1); opacity: 0.7; } }\n\n.anim-zoom-29 { animation: anim-zoom-29 2s infinite ease-in-out; }\n@keyframes anim-zoom-29 { 0% { transform: scale(1); opacity: 0.7; } 50% { transform: scale(1.2) rotate(43.5deg); opacity: 1; } 100% { transform: scale(1); opacity: 0.7; } }\n\n.anim-swing-30 { animation: anim-swing-30 2s infinite ease-in-out; }\n@keyframes anim-swing-30 { 0% { transform: scale(1); opacity: 0.7; } 50% { transform: scale(1.2) rotate(45.0deg); opacity: 1; } 100% { transform: scale(1); opacity: 0.7; } }\n\n.anim-fade-31 { animation: anim-fade-31 2s infinite ease-in-out; }\n@keyframes anim-fade-31 { 0% { transform: scale(1); opacity: 0.7; } 50% { transform: scale(1.2) rotate(46.5deg); opacity: 1; } 100% { transform: scale(1); opacity: 0.7; } }\n\n.anim-slide-32 { animation: anim-slide-32 2s infinite ease-in-out; }\n@keyframes anim-slide-32 { 0% { transform: scale(1); opacity: 0.7; } 50% { transform: scale(1.2) rotate(48.0deg); opacity: 1; } 100% { transform: scale(1); opacity: 0.7; } }\n\n.anim-bounce-33 { animation: anim-bounce-33 2s infinite ease-in-out; }\n@keyframes anim-bounce-33 { 0% { transform: scale(1); opacity: 0.7; } 50% { transform: scale(1.2) rotate(49.5deg); opacity: 1; } 100% { transform: scale(1); opacity: 0.7; } }\n\n.anim-pulse-34 { animation: anim-pulse-34 2s infinite ease-in-out; }\n@keyframes anim-pulse-34 { 0% { transform: scale(1); opacity: 0.7; } 50% { transform: scale(1.2) rotate(51.0deg); opacity: 1; } 100% { transform: scale(1); opacity: 0.7; } }\n\n.anim-flip-35 { animation: anim-flip-35 2s infinite ease-in-out; }\n@keyframes anim-flip-35 { 0% { transform: scale(1); opacity: 0.7; } 50% { transform: scale(1.2) rotate(52.5deg); opacity: 1; } 100% { transform: scale(1); opacity: 0.7; } }\n\n.anim-rotate-36 { animation: anim-rotate-36 2s infinite ease-in-out; }\n@keyframes anim-rotate-36 { 0% { transform: scale(1); opacity: 0.7; } 50% { transform: scale(1.2) rotate(54.0deg); opacity: 1; } 100% { transform: scale(1); opacity: 0.7; } }\n\n.anim-shake-37 { animation: anim-shake-37 2s infinite ease-in-out; }\n@keyframes anim-shake-37 { 0% { transform: scale(1); opacity: 0.7; } 50% { transform: scale(1.2) rotate(55.5deg); opacity: 1; } 100% { transform: scale(1); opacity: 0.7; } }\n\n.anim-glitch-38 { animation: anim-glitch-38 2s infinite ease-in-out; }\n@keyframes anim-glitch-38 { 0% { transform: scale(1); opacity: 0.7; } 50% { transform: scale(1.2) rotate(57.0deg); opacity: 1; } 100% { transform: scale(1); opacity: 0.7; } }\n\n.anim-zoom-39 { animation: anim-zoom-39 2s infinite ease-in-out; }\n@keyframes anim-zoom-39 { 0% { transform: scale(1); opacity: 0.7; } 50% { transform: scale(1.2) rotate(58.5deg); opacity: 1; } 100% { transform: scale(1); opacity: 0.7; } }\n\n.anim-swing-40 { animation: anim-swing-40 2s infinite ease-in-out; }\n@keyframes anim-swing-40 { 0% { transform: scale(1); opacity: 0.7; } 50% { transform: scale(1.2) rotate(60.0deg); opacity: 1; } 100% { transform: scale(1); opacity: 0.7; } }\n\n.anim-fade-41 { animation: anim-fade-41 2s infinite ease-in-out; }\n@keyframes anim-fade-41 { 0% { transform: scale(1); opacity: 0.7; } 50% { transform: scale(1.2) rotate(61.5deg); opacity: 1; } 100% { transform: scale(1); opacity: 0.7; } }\n\n.anim-slide-42 { animation: anim-slide-42 2s infinite ease-in-out; }\n@keyframes anim-slide-42 { 0% { transform: scale(1); opacity: 0.7; } 50% { transform: scale(1.2) rotate(63.0deg); opacity: 1; } 100% { transform: scale(1); opacity: 0.7; } }\n\n.anim-bounce-43 { animation: anim-bounce-43 2s infinite ease-in-out; }\n@keyframes anim-bounce-43 { 0% { transform: scale(1); opacity: 0.7; } 50% { transform: scale(1.2) rotate(64.5deg); opacity: 1; } 100% { transform: scale(1); opacity: 0.7; } }\n\n.anim-pulse-44 { animation: anim-pulse-44 2s infinite ease-in-out; }\n@keyframes anim-pulse-44 { 0% { transform: scale(1); opacity: 0.7; } 50% { transform: scale(1.2) rotate(66.0deg); opacity: 1; } 100% { transform: scale(1); opacity: 0.7; } }\n\n.anim-flip-45 { animation: anim-flip-45 2s infinite ease-in-out; }\n@keyframes anim-flip-45 { 0% { transform: scale(1); opacity: 0.7; } 50% { transform: scale(1.2) rotate(67.5deg); opacity: 1; } 100% { transform: scale(1); opacity: 0.7; } }\n\n.anim-rotate-46 { animation: anim-rotate-46 2s infinite ease-in-out; }\n@keyframes anim-rotate-46 { 0% { transform: scale(1); opacity: 0.7; } 50% { transform: scale(1.2) rotate(69.0deg); opacity: 1; } 100% { transform: scale(1); opacity: 0.7; } }\n\n.anim-shake-47 { animation: anim-shake-47 2s infinite ease-in-out; }\n@keyframes anim-shake-47 { 0% { transform: scale(1); opacity: 0.7; } 50% { transform: scale(1.2) rotate(70.5deg); opacity: 1; } 100% { transform: scale(1); opacity: 0.7; } }\n\n.anim-glitch-48 { animation: anim-glitch-48 2s infinite ease-in-out; }\n@keyframes anim-glitch-48 { 0% { transform: scale(1); opacity: 0.7; } 50% { transform: scale(1.2) rotate(72.0deg); opacity: 1; } 100% { transform: scale(1); opacity: 0.7; } }\n\n.anim-zoom-49 { animation: anim-zoom-49 2s infinite ease-in-out; }\n@keyframes anim-zoom-49 { 0% { transform: scale(1); opacity: 0.7; } 50% { transform: scale(1.2) rotate(73.5deg); opacity: 1; } 100% { transform: scale(1); opacity: 0.7; } }\n\n.anim-swing-50 { animation: anim-swing-50 2s infinite ease-in-out; }\n@keyframes anim-swing-50 { 0% { transform: scale(1); opacity: 0.7; } 50% { transform: scale(1.2) rotate(75.0deg); opacity: 1; } 100% { transform: scale(1); opacity: 0.7; } }\n\n.anim-fade-51 { animation: anim-fade-51 2s infinite ease-in-out; }\n@keyframes anim-fade-51 { 0% { transform: scale(1); opacity: 0.7; } 50% { transform: scale(1.2) rotate(76.5deg); opacity: 1; } 100% { transform: scale(1); opacity: 0.7; } }\n\n.anim-slide-52 { animation: anim-slide-52 2s infinite ease-in-out; }\n@keyframes anim-slide-52 { 0% { transform: scale(1); opacity: 0.7; } 50% { transform: scale(1.2) rotate(78.0deg); opacity: 1; } 100% { transform: scale(1); opacity: 0.7; } }\n\n.anim-bounce-53 { animation: anim-bounce-53 2s infinite ease-in-out; }\n@keyframes anim-bounce-53 { 0% { transform: scale(1); opacity: 0.7; } 50% { transform: scale(1.2) rotate(79.5deg); opacity: 1; } 100% { transform: scale(1); opacity: 0.7; } }\n\n.anim-pulse-54 { animation: anim-pulse-54 2s infinite ease-in-out; }\n@keyframes anim-pulse-54 { 0% { transform: scale(1); opacity: 0.7; } 50% { transform: scale(1.2) rotate(81.0deg); opacity: 1; } 100% { transform: scale(1); opacity: 0.7; } }\n\n.anim-flip-55 { animation: anim-flip-55 2s infinite ease-in-out; }\n@keyframes anim-flip-55 { 0% { transform: scale(1); opacity: 0.7; } 50% { transform: scale(1.2) rotate(82.5deg); opacity: 1; } 100% { transform: scale(1); opacity: 0.7; } }\n\n.anim-rotate-56 { animation: anim-rotate-56 2s infinite ease-in-out; }\n@keyframes anim-rotate-56 { 0% { transform: scale(1); opacity: 0.7; } 50% { transform: scale(1.2) rotate(84.0deg); opacity: 1; } 100% { transform: scale(1); opacity: 0.7; } }\n\n.anim-shake-57 { animation: anim-shake-57 2s infinite ease-in-out; }\n@keyframes anim-shake-57 { 0% { transform: scale(1); opacity: 0.7; } 50% { transform: scale(1.2) rotate(85.5deg); opacity: 1; } 100% { transform: scale(1); opacity: 0.7; } }\n\n.anim-glitch-58 { animation: anim-glitch-58 2s infinite ease-in-out; }\n@keyframes anim-glitch-58 { 0% { transform: scale(1); opacity: 0.7; } 50% { transform: scale(1.2) rotate(87.0deg); opacity: 1; } 100% { transform: scale(1); opacity: 0.7; } }\n\n.anim-zoom-59 { animation: anim-zoom-59 2s infinite ease-in-out; }\n@keyframes anim-zoom-59 { 0% { transform: scale(1); opacity: 0.7; } 50% { transform: scale(1.2) rotate(88.5deg); opacity: 1; } 100% { transform: scale(1); opacity: 0.7; } }\n\n.anim-swing-60 { animation: anim-swing-60 2s infinite ease-in-out; }\n@keyframes anim-swing-60 { 0% { transform: scale(1); opacity: 0.7; } 50% { transform: scale(1.2) rotate(90.0deg); opacity: 1; } 100% { transform: scale(1); opacity: 0.7; } }\n\n.anim-fade-61 { animation: anim-fade-61 2s infinite ease-in-out; }\n@keyframes anim-fade-61 { 0% { transform: scale(1); opacity: 0.7; } 50% { transform: scale(1.2) rotate(91.5deg); opacity: 1; } 100% { transform: scale(1); opacity: 0.7; } }\n\n.anim-slide-62 { animation: anim-slide-62 2s infinite ease-in-out; }\n@keyframes anim-slide-62 { 0% { transform: scale(1); opacity: 0.7; } 50% { transform: scale(1.2) rotate(93.0deg); opacity: 1; } 100% { transform: scale(1); opacity: 0.7; } }\n\n.anim-bounce-63 { animation: anim-bounce-63 2s infinite ease-in-out; }\n@keyframes anim-bounce-63 { 0% { transform: scale(1); opacity: 0.7; } 50% { transform: scale(1.2) rotate(94.5deg); opacity: 1; } 100% { transform: scale(1); opacity: 0.7; } }\n\n.anim-pulse-64 { animation: anim-pulse-64 2s infinite ease-in-out; }\n@keyframes anim-pulse-64 { 0% { transform: scale(1); opacity: 0.7; } 50% { transform: scale(1.2) rotate(96.0deg); opacity: 1; } 100% { transform: scale(1); opacity: 0.7; } }\n\n.anim-flip-65 { animation: anim-flip-65 2s infinite ease-in-out; }\n@keyframes anim-flip-65 { 0% { transform: scale(1); opacity: 0.7; } 50% { transform: scale(1.2) rotate(97.5deg); opacity: 1; } 100% { transform: scale(1); opacity: 0.7; } }\n\n.anim-rotate-66 { animation: anim-rotate-66 2s infinite ease-in-out; }\n@keyframes anim-rotate-66 { 0% { transform: scale(1); opacity: 0.7; } 50% { transform: scale(1.2) rotate(99.0deg); opacity: 1; } 100% { transform: scale(1); opacity: 0.7; } }\n\n.anim-shake-67 { animation: anim-shake-67 2s infinite ease-in-out; }\n@keyframes anim-shake-67 { 0% { transform: scale(1); opacity: 0.7; } 50% { transform: scale(1.2) rotate(100.5deg); opacity: 1; } 100% { transform: scale(1); opacity: 0.7; } }\n\n.anim-glitch-68 { animation: anim-glitch-68 2s infinite ease-in-out; }\n@keyframes anim-glitch-68 { 0% { transform: scale(1); opacity: 0.7; } 50% { transform: scale(1.2) rotate(102.0deg); opacity: 1; } 100% { transform: scale(1); opacity: 0.7; } }\n\n.anim-zoom-69 { animation: anim-zoom-69 2s infinite ease-in-out; }\n@keyframes anim-zoom-69 { 0% { transform: scale(1); opacity: 0.7; } 50% { transform: scale(1.2) rotate(103.5deg); opacity: 1; } 100% { transform: scale(1); opacity: 0.7; } }\n\n.anim-swing-70 { animation: anim-swing-70 2s infinite ease-in-out; }\n@keyframes anim-swing-70 { 0% { transform: scale(1); opacity: 0.7; } 50% { transform: scale(1.2) rotate(105.0deg); opacity: 1; } 100% { transform: scale(1); opacity: 0.7; } }\n\n.anim-fade-71 { animation: anim-fade-71 2s infinite ease-in-out; }\n@keyframes anim-fade-71 { 0% { transform: scale(1); opacity: 0.7; } 50% { transform: scale(1.2) rotate(106.5deg); opacity: 1; } 100% { transform: scale(1); opacity: 0.7; } }\n\n.anim-slide-72 { animation: anim-slide-72 2s infinite ease-in-out; }\n@keyframes anim-slide-72 { 0% { transform: scale(1); opacity: 0.7; } 50% { transform: scale(1.2) rotate(108.0deg); opacity: 1; } 100% { transform: scale(1); opacity: 0.7; } }\n\n.anim-bounce-73 { animation: anim-bounce-73 2s infinite ease-in-out; }\n@keyframes anim-bounce-73 { 0% { transform: scale(1); opacity: 0.7; } 50% { transform: scale(1.2) rotate(109.5deg); opacity: 1; } 100% { transform: scale(1); opacity: 0.7; } }\n\n.anim-pulse-74 { animation: anim-pulse-74 2s infinite ease-in-out; }\n@keyframes anim-pulse-74 { 0% { transform: scale(1); opacity: 0.7; } 50% { transform: scale(1.2) rotate(111.0deg); opacity: 1; } 100% { transform: scale(1); opacity: 0.7; } }\n\n.anim-flip-75 { animation: anim-flip-75 2s infinite ease-in-out; }\n@keyframes anim-flip-75 { 0% { transform: scale(1); opacity: 0.7; } 50% { transform: scale(1.2) rotate(112.5deg); opacity: 1; } 100% { transform: scale(1); opacity: 0.7; } }\n\n.anim-rotate-76 { animation: anim-rotate-76 2s infinite ease-in-out; }\n@keyframes anim-rotate-76 { 0% { transform: scale(1); opacity: 0.7; } 50% { transform: scale(1.2) rotate(114.0deg); opacity: 1; } 100% { transform: scale(1); opacity: 0.7; } }\n\n.anim-shake-77 { animation: anim-shake-77 2s infinite ease-in-out; }\n@keyframes anim-shake-77 { 0% { transform: scale(1); opacity: 0.7; } 50% { transform: scale(1.2) rotate(115.5deg); opacity: 1; } 100% { transform: scale(1); opacity: 0.7; } }\n\n.anim-glitch-78 { animation: anim-glitch-78 2s infinite ease-in-out; }\n@keyframes anim-glitch-78 { 0% { transform: scale(1); opacity: 0.7; } 50% { transform: scale(1.2) rotate(117.0deg); opacity: 1; } 100% { transform: scale(1); opacity: 0.7; } }\n\n.anim-zoom-79 { animation: anim-zoom-79 2s infinite ease-in-out; }\n@keyframes anim-zoom-79 { 0% { transform: scale(1); opacity: 0.7; } 50% { transform: scale(1.2) rotate(118.5deg); opacity: 1; } 100% { transform: scale(1); opacity: 0.7; } }\n\n.anim-swing-80 { animation: anim-swing-80 2s infinite ease-in-out; }\n@keyframes anim-swing-80 { 0% { transform: scale(1); opacity: 0.7; } 50% { transform: scale(1.2) rotate(120.0deg); opacity: 1; } 100% { transform: scale(1); opacity: 0.7; } }\n

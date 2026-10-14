@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Labo Animations CSS - 80 Effets</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>⚡ Labo Animations CSS</h1>
+        <p>Explorez, testez et copiez 80 animations CSS pour vos projets.</p>
+    </header>
+
+    <nav class="tabs">
+        <button class="tab-btn active" data-category="all">Toutes</button>
+        <button class="tab-btn" data-category="basic">Basiques</button>
+        <button class="tab-btn" data-category="entrance">Entrées / Sorties</button>
+        <button class="tab-btn" data-category="attention">Attention</button>
+        <button class="tab-btn" data-category="advanced">Avancées & 3D</button>
+    </nav>
+
+    <main class="animation-grid" id="animationGrid"></main>
+
+    <!-- Modal de Code -->
+    <div class="modal" id="codeModal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <h2 id="modalTitle">Nom de l'animation</h2>
+            <p id="modalDesc">Description de l'animation...</p>
+            
+            <div class="code-box">
+                <h3>Code HTML</h3>
+                <pre><code id="htmlCode"></code></pre>
+                <button class="copy-btn" onclick="copyCode('htmlCode')">Copier HTML</button>
+            </div>
+
+            <div class="code-box">
+                <h3>Code CSS</h3>
+                <pre><code id="cssCode"></code></pre>
+                <button class="copy-btn" onclick="copyCode('cssCode')">Copier CSS</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
